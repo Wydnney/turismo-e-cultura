@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Travly - Brasil</title> <!-- alterar caso seja necessário -->
+    <link rel="stylesheet" href="turism.css"><!-- css -->
+    <link rel="shortcut icon" href="/travly-front/IMG/Logo01.png" type="image/x-icon"> <!-- favicon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!-- icons -->
+</head>
+
+<!-- Ao criar uma nova página de país:
+Tudo que você irá modificar está aqui no HTML e explicado corretamente.
+A única coisa que você irá modificar no CSS é o background. -->
+
+<body>
+
+    <!-- botão voltar ao topo da página -->
+    <button id="backToTop" onclick="scrollToTop()"><i class='bx bxs-up-arrow'
+            style="color: #ffffff;"></i></box-icon></button>
+
+    <!-- navbar -->
+    <div id="navbar"></div>
+
+    <script>
+        fetch('../../../../components/navbar/nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+    </script>
+
+    <!-- main -->
+    <main>
+        <div class="background">
+            <!-- mudar background do país no css -->
+
+            <!-- menu lateral esquerda -->
+            <section class="menu">
+                <div class="bloco-bandeira">
+                    <img class="bandeira" src="../images/bandeira-canada.png" alt="Bandeira do Brasil">
+                    <!-- mudar imagem e alt de acordo com país -->
+                    <h1>Canadá</h1> <!-- mudar nome do país -->
+                </div>
+
+                <!-- nota de avaliações e curtidas -->
+                <!-- numeros ilusórios, atualizar com média do banco de dados -->
+                <div class="curtidas">
+                    <div class="avaliacao">
+                        <i class='bx bxs-star' id="img-curtidas"></i>
+                        <p>8k</p>
+                    </div>
+                    <div class="favoritos">
+                        <i class='bx bxs-heart' id="img-favoritos"></i>
+
+                        <p>34k</p>
+                    </div>
+                </div>
+
+                <!-- menu de páginas -->
+                <div>
+                    <ul class="menuzinho">
+                        <!-- colocar o id="selected" da página que estiver -->
+                        <!-- mudar caminhos de acordo com o país -->
+                        <li><a href="../main-brazil/pagebrazil.html">SOBRE</a></li>
+                        <hr>
+                        <li id="selected"><a href="../tourism/turism.html">TURISMO E IMIGRAÇÃO</a></li>
+                        <hr>
+                        <li><a href="../laws-brazil/page-laws.html">LEIS</a></li>
+                        <hr>
+                        <li><a href="../pontos-turisticos/pontos-brazil.html">PONTOS TURÍSTICOS</a></li>
+                        <hr>
+                        <li><a href="../events-brazil/events.html">EVENTOS</a></li>
+                        <hr>
+                        <li><a href="../culture/culture-canada.html">CULTURA</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- conteúdo principal -->
+            <section class="conteudo">
+                <div class="caixa-conteudo">
+                    <h1>Turismo e imigracao</h1>
+
+                    <!-- turismo e imigração -->
+                    <article class="main-conteudo">
+
+                        <div class="requisitos">
+                            <h2>Requisitos para entrar no país</h2>
+                            <p>Qualquer brasileiro precisa de visto para entrar no Canadá, seja para intercâmbios,
+                                cursos rápidos e até mesmo turismo. Para isso, o Canadá oferece 3 tipos de vistos para
+                                esses visitantes que desejam estudar ou turistar, que vêm acompanhados de alguns
+                                requisitos a serem levados em consideração. Para tirar e validar seu visto é preciso
+                                seguir as seguintes regras:</p>
+
+                            <div class="vacinas">
+                                <ul>
+                                    <li>Não possuir pendências nem antecedentes criminais relacionados a imigração</li>
+                                    <li>Ter um passaporte em dia por pelo menos 6 meses</li>
+                                    <li>Possuir dinheiro o suficiente para o tempo de sua estadia</li>
+                                    <li>Preencher o formulário para a solicitação de visto disponível no site do governo
+                                        do Canadá</li>
+                                    <li>Apresentar fotos</li>
+                                    <li>Comprovar que você irá ficar somente pelo tempo declarado e que possui intenção
+                                        de voltar ao seu país de origem ao fim da viagem</li>
+                                    <li>Fazer o pagamento da taxa de solicitação do visto, valor que irá variar a
+                                        depender do tipo de visto</li>
+                                    <li>Em certas ocasiões, será necessário passar por uma entrevista e/ou um exame
+                                        médico.</li>
+                                </ul>
+                            </div>
+
+                            <div class="itens">
+                                <h3>TIPOS DE VISTOS CANADENSES PARA TURISMO E ESTUDO:
+                                    <h3>
+
+                                        <div class="item">
+                                            <h5>1- VISTO DE VISITANTE (TURISMO);</h5>
+                                            <p>Este é o visto mais comum, o visto permite uma estadia de até 6 meses no
+                                                território Canadense, esse visto permite que você também estude, porém a
+                                                duração dos estudos precisa ser de 6 meses. Não é permitido trabalhar no
+                                                Canadá com o visto de visitante.
+                                            </p>
+                                            <p>Também é interessante fazer o pedido do visto com pelo menos 2 meses de
+                                                antecedência de sua viagem.</p>
+                                        </div>
+
+                                        <div class="item">
+                                            <h5>DOCUMENTOS NECESSÁRIOS PARA O VISTO:</h5>
+                                            <ul>
+                                                <li>Foto 3x4 digitalizada</li>
+                                                <li>Passaporte válido até pelo menos 6 meses</li>
+                                                <li>Cópia do seu RG</li>
+                                                <li>Cópia de sua última declaração de imposto de renda</li>
+                                                <li>Formulários</li>
+                                                <li>Passaportes antigos originais caso você possua</li>
+                                                <li>Seus 3 últimos extratos bancário</li>
+                                                <li>Seus 3 últimos extratos de investimentos e aplicações bancárias caso
+                                                    realize.</li>
+                                                <li>Se a viagem for para estudo (de até 6 meses de duração), é
+                                                    necessário apresentar a carta de aceitação da escola e documentos
+                                                    que comprovem o pagamento do curso.</li>
+                                            </ul>
+
+                                        </div>
+
+                                        <div class="item">
+                                            <h5>2- VISTO DE ESTUDANTE (Study Permit)</h5>
+                                            <p>O Visto de Estudante, popularmente conhecido como o Study Permit, é um
+                                                tipo de visto para aqueles que desejam estudar no Canadá por um período
+                                                maior do que 6 meses. Com o visto de estudante, você poderá permanecer
+                                                no Canadá pelo período de duração inteiro de seus estudos, e mais um
+                                                período extra de cerca de 90 dias com intuito de que o estudante possa
+                                                se organizar para retornar ao seu país de origem ao final do curso. O
+                                                Study Permit possui dois tipos de classificações sendo elas S-1 ou SW-1,
+                                                o SW-1 que se chama “Student Worker” é emitido para aqueles que, no
+                                                contrato do curso, está previsto um período trabalhando</p>
+                                            <p>Considere solicitar seu visto de estudante ao menos 4 meses antes da
+                                                viagem, e também certifique-se de que a sua instituição de ensino é
+                                                formalizada e reconhecida pelo governo Canadense.</p>
+                                            <ul>
+                                                <li>Foto 3x4 digitalizada</li>
+                                                <li>Passaporte válido até pelo menos 6 meses</li>
+                                                <li>Cópia do seu RG</li>
+                                                <li>Cópia de sua última declaração de imposto de renda</li>
+                                                <li>Formulários</li>
+                                                <li>Passaportes antigos originais caso você possua</li>
+                                                <li>Seus 3 últimos extratos bancários</li>
+                                                <li>Seus 3 últimos extratos de investimentos e aplicações bancárias caso
+                                                    realize.</li>
+                                                <li>Apresentar a carta de aceitação da escola e documentos que comprovem
+                                                    o pagamento do curso.</li>
+                                                <li>Caso for menor de idade, apresentar também a autorização de viagem
+                                                    dos pais autenticada em cartório e Carta custódia.</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="item">
+                                            <h5>3- VISTO ETA (Electronic Travel Authorization)</h5>
+                                            <p>O eTA é mais simples e mais rápido de solicitar, é uma autorização
+                                                eletrônica que tem suas regras iguais ao do visto de visitante, como por
+                                                exemplo, a estadia somente poderá ser de até 6 meses no Canadá. <br> É
+                                                importante observar que, é regra do ETA que sua primeira viagem ao
+                                                Canadá seja feita por via aérea.
+                                                Os requisitos para emitir o eTA são poucos e simples
+                                            </p>
+                                            <ul>
+                                                <li>É preciso entre um desses: um visto americano válido, ou um visto
+                                                    canadense nos últimos 10 anos, ou ter algum passaporte de
+                                                    determinados países.
+                                                    Para saber se o seu passaporte é válido para emitir o eTA, acesse:
+                                                    https://ircc.canada.ca/english/visit/visas.asp
+                                                </li>
+                                                <li>Acessando o site oficial do governo do canada, voce podera emitir
+                                                    seu eTA,
+                                                    <a
+                                                        href="https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/eta/apply-br.html">
+                                                        class
+                                                        <link rel="stylesheet" href="">
+                                                        https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/eta/apply-br.html
+                                                    </a>
+                                                </li>
+                                                <li>Existe um custo a ser pago para a emissão do eTA, o pagamento é
+                                                    feito de forma online</li>
+                                                <li>Lembrando que, ter um eTA não significa que sua entrada no Canadá
+                                                    está garantida, esta decisão será feita por um oficial de imigração
+                                                    que ira o analisar em sua chegada.</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="item">
+                                            <h5> COMO IMIGRAR PARA O CANADÁ</h5>
+                                            <p>Morar em outro país é o sonho de muitos, e o Canadá é um dos mais falados
+                                                e almejados países para a imigração. Construir uma vida e formar laços
+                                                fora do seu país de origem não deixa de ser difícil, mas será uma
+                                                experiência como nenhuma outra. Existem algumas formas para imigrar ao
+                                                Canadá, como o Express Entry, os programas provinciais de nomeação, por
+                                                meio dos estudos com um visto de estudante e também pelo CEC (Canadian
+                                                Experience Class). Abaixo vamos falar sobre cada uma:
+                                            </p>
+                                            <h5> EXPRESS ENTRY</h5>
+                                            <p>O Express Entry é um dos mais famosos programas Canadenses para conseguir
+                                                morar no canadá permanentemente, é um sistema de pontos que se baseia em
+                                                alguns critérios, são eles:</p>
+                                            <ul>
+                                                <li>Idade</li>
+                                                <li>Nível educacional</li>
+                                                <li>Experiência profissional</li>
+                                                <li>Proficiencia em Ingles ou Frances (IELTS, CELPIP ou TEF)</li>
+                                                <li>Se há ofertas de trabalho no Canadá</li>
+                                                <li>Alguma experiência prévia de trabalho ou de estudos no Canadá</li>
+                                            </ul>
+                                            <p>Após serem julgados por um sistema de pontos ( também chamado de
+                                                Comprehensive Ranking System (CRS)), o departamento canadense
+                                                responsável pelas imigrações irá avaliar seu perfil e decidir em quais
+                                                dos 3 programas migracionais do Express Entry você se encaixa melhor. Os
+                                                3 programas são
+                                            </p>
+                                            <ul>
+                                                <li>Federal Skilled Worker Program (FSWP): Para trabalhadores
+                                                    qualificados com experiência de trabalho</li>
+                                                <li>Federal Skilled Trades Program (FSTP): Para pessoas com experiência
+                                                    em ocupações qualificadas.</li>
+                                                <li>Canadian Experience Class (CEC): Para trabalhadores temporários que
+                                                    já têm experiência de trabalho no Canadá</li>
+                                            </ul>
+
+                                            <h5>2-PROGRAMAS PROVINCIAIS DE NOMEAÇÃO (PNP);</h5>
+                                            <p>O governo do Canadá instaura regras gerais para os processos de
+                                                imigração, porém, cada província canadense tem autonomia para instaurar
+                                                seus próprios processos da maneira que achar melhor para o estado. É aí
+                                                que entram os Programas Provinciais, cada província irá ter sua regra
+                                                quanto a imigração de uma pessoa já que, a base deste programa é para
+                                                poder suprir a alta demanda do mercado de trabalho canadense.
+                                                Cada província possui seu próprio programa provincial, e para cada
+                                                existe uma intenção diferente para a imigração, seja ela a necessidade
+                                                de trabalhadores qualificados, alunos ou empreendedores, veja a seguir o
+                                                programa provincial de cada província;
+                                            </p>
+                                            <ul>
+                                                <li>Alberta (AINP – Alberta Immigrant Nominee Program)</li>
+                                                <li>British Columbia (BC PNP – BC Provincial Nominee Program)</li>
+                                                <li>Manitoba (MPNP – Manitoba Provincial Nominee Program)</li>
+                                                <li>New Brunswick (NB PNP – New Brunswick Skilled Worker)</li>
+                                                <li>Newfoundland and Labrador (NL PNP – Newfoundland and Labrador
+                                                    Provincial
+                                                    Nominee Program)</li>
+                                                <li>Northwest Territories (NWT PNP – Northwest Territories Nominee
+                                                    Program)</li>
+                                                <li>Nova Scotia (NSNP – Nova Scotia Nominee Program)</li>
+                                                <li>Ontario (OINP – Ontario Immigrant Nominee Program)</li>
+                                                <li>Prince Edward Island (PEI PNP – Prince Edward Island Program)</li>
+                                                <li>Saskatchewan (SINP -Saskatchewan Immigrant Nominee Program)</li>
+                                                <li>Yukon (YNP – Yukon Nominee Program)</li>
+                                            </ul>
+
+                                            <h5>3-IMIGRAR COMO ESTUDANTE</h5>
+                                            <p>Uma das formas mais escolhidas e conhecidas de estadia permanente no
+                                                Canadá é por meio dos estudos. Neste caminho existem inúmeras variáveis
+                                                para conseguir sua tão sonhada permanência.
+                                                Um dos principais caminhos é vir ao canadá com o Study Permit a fim de
+                                                estudar numa college (faculdade), career college (curso técnico) ou
+                                                university (universidade), porém é importante lembrar que, as próximas
+                                                etapas só valerão caso seu curso seja um curso de nível superior,e
+                                                possua uma duração de mais de 8 meses.
+                                                Com isso, você poderá estudar e trabalhar num emprego part-time(meio
+                                                período), e após formado, terá o direito de se aplicar para o PGWP
+                                                (post-graduation work permit), que irá lhe garantir de 1 a 3 anos de
+                                                estadia no Canadá. O PGWP é um visto de trabalho que o Canadá oferece a
+                                                quem se formou no país.
+                                                Durante seu tempo com o visto de trabalho, é importante que você se
+                                                aplique no Express Entry, para então, ter uma chance de obter o seu P.R
+                                                (residência permanente).
+                                                Também existe a possibilidade de trabalhar em uma empresa que queira
+                                                fazer seu sponsorship, ou seja, uma espécie de patrocínio onde a empresa
+                                                em que você trabalha irá o apoiar para a obtenção de um visto permanente
+                                                no Canadá.
+                                            </p>
+                                            <p>Para mais informações sobre os meios e metodos legais para imigração ao
+                                                Canada, acesse: <a
+                                                    href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada.html">https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada.html</a>
+                                            </p>
+
+
+                                        </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="solicitar-visto">
+                            <h2>PAÍSES QUE NÃO PRECISAM DE VISTO PARA VIAJAR AO CANADÁ</h2>
+                            <p>Cidadãos de alguns países não precisam obrigatoriamente de um visto para viajar ao
+                                Canadá, porém precisam do eTA (Electronic Travel Authorization) para fazer a viagem de
+                                avião, alguns exemplos de países são</p>
+                            <ul>
+                                <li>União Europeia (Schengen)</li>
+                                <li>Japão</li>
+                                <li>Coreia do Sul</li>
+                                <li>Hong Kong</li>
+                                <li>Cingapura</li>
+                                <li>Reino Unido</li>
+                                <li>Austrália</li>
+                                <li>Nova Zelândia</li>
+                                <li>Estados Unidos</li>
+                                <li>Brasil</li>
+                            </ul>
+                            <p>Para saber se o seu país precisa ou não de um visto para fazer uma viagem ao Canadá,
+                                acesse: Descubra a Autorização de Viagem Eletrônica (AVE) - Canada.ca</p>
+
+                            <div class="itens">
+                                <div class="item">
+                                    <div class="paises">
+                                        <h5>PAÍSES DO MERCOSUL:</h5>
+                                        <p>Argentina, Paraguai, Uruguai e Venezuela(suspensa).
+                                        <h5>OUTROS:</h5>
+                                        <p>França, Hong Kong, Irlanda, Itália, Peru, África do Sul, Reino Unido, e
+                                            muitos mais.</p>
+                                    </div>
+                                </div>
+
+                                <p>Para saber se o seu país precisa de visto ou não para viajar ao Brasil, acesse <a
+                                        href="https://www.gov.br/mre/pt-br/assuntos/portal-consular/vistos/quadro-geral-de-regime-de-vistos-para-entrada-de-estrangeiros-no-brasil"
+                                        target="_blank" class="link">Quadro Geral de Regime de Vistos para entrada de
+                                        estrangeiros no Brasil — Ministério das Relações Exteriores</a></p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="outro">
+
+                <!-- favoritar -->
+                <!-- atualizar com backend para exigir estar logado -->
+                <!-- <div class="favoritar">
+                    <i class='bx bx-heart' id="img-favoritar" onclick="favoritar()"></i>
+                    <h3 id="texto-favoritar">FAVORITAR</h3>
+                </div> -->
+
+                <!-- avaliar -->
+                <!-- atualizar com backend para exigir estar logado -->
+                <div class="avaliar">
+                    <span>
+                        <h3>AVALIAR</h3>
+                    </span>
+                    <ul class="estrelas-avaliar">
+                        <li class="estrela" data-value="1"><i class='bx bx-star' id="img-avaliar"></i></li>
+                        <li class="estrela" data-value="2"><i class='bx bx-star' id="img-avaliar"></i></li>
+                        <li class="estrela" data-value="3"><i class='bx bx-star' id="img-avaliar"></i></li>
+                        <li class="estrela" data-value="4"><i class='bx bx-star' id="img-avaliar"></i></li>
+                        <li class="estrela" data-value="5"><i class='bx bx-star' id="img-avaliar"></i></li>
+                    </ul>
+                    <a href="#">e comentar </a>
+                    <!-- atualizar com caixinha que abre por cima -->
+                </div>
+
+                <!-- ver avaliações -->
+                <div class="ver-avaliacoes">
+                    <a href="#">Ver avaliações</a>
+                </div>
+
+                <!-- mapa -->
+                <div class="mapa">
+                    <div style="width: 100%"><iframe class="map" width="100%" height="240" frameborder="0"
+                            scrolling="no" marginheight="0" marginwidth="0"
+                            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=brazil+(Brasil)&amp;t=&amp;z=3&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+                                href="https://www.gps.ie/">gps trackers</a></iframe></div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- código javascript -->
+    <script src="../script.js"></script>
+
+</body>
+
+</html>

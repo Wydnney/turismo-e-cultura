@@ -1,0 +1,449 @@
+/* GERAL */ 
+
+* {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* paleta de cores */
+:root {
+    --purple: #9775C9; /* roxo principal - para destaques */
+    --light_purple: #CEADFF; /* roxo textos */
+    --soft_pink: #E0CCFF; /* roxo leve */
+    --white: #FFFFFF; /* branco padrão */
+    --light_grey: #76777a; /* para hr */
+    --gray: #565B69; /* cinza caixinhas */
+    --outro_gray: #303741; /* cinza caixinhas escuras */
+    --medium_gray: #25292F; /* background */
+    --dark: #14181C; /* preto padrão */
+    --hover_purple: #6c4a97;
+    --amarelo: #FFD484;
+    --text: 'league', arial, sans-serif; /* textos */
+    --title: 'bebas', arial, sans-serif; /* títulos */
+}
+
+/* FONTES */
+
+/* bebas */
+@font-face {
+    font-family: 'bebas';
+    src: url('../../../../FONTS/Bebas_Neue/BebasNeue-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* league */
+@font-face {
+    font-family: 'league';
+    src:  url('../../../../FONTS/League_Spartan/LeagueSpartan-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* BARRA DE ROLAGEM */
+::-webkit-scrollbar {
+    width: 10px; /* Largura da barra de rolagem */
+    height: 10px; /* Altura da barra de rolagem horizontal */
+}
+
+::-webkit-scrollbar-track {
+    background: var(--medium_gray); /* Cor do fundo da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--purple); /* Cor da barra de rolagem */
+    border-radius: 10px; /* Arredondamento */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--hover_purple); /* Cor da barra de rolagem ao passar o mouse */
+}
+
+/* ///////////////////////////////////////////////////// */
+
+/* PRINCIPAL */
+
+/* background país */
+body{
+    /* mudar apenas a imagem de acordo com o país */
+    /* essa é a única modificação que deve ser feita no css */
+    background: #25292f1e url('../images/riodejaneiro.jpg') center top no-repeat fixed;
+    background-size: cover;
+    background-blend-mode: overlay;
+
+}
+
+/* background país */
+.background {
+    display: flex;
+    background-color: #25292F;
+    margin-top: 250px;
+    width: auto;
+}
+
+main {
+    box-shadow: 0px 0px 10px #14181c69;
+}
+
+/* todas as caixinhas */
+section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+}
+
+/* ///////////////////////////////////////////////////// */
+
+/* MENU ESQUERDA */
+
+.menu {
+    padding-left: 70px;
+}
+
+.bandeira{
+    width: 300px;
+    height: 200px;
+    border: 20px solid var(--medium_gray);
+    border-radius: 10%;
+    box-shadow: 0px 0px 10px #14181c69;
+}
+
+.bloco-bandeira {
+    margin-top: -190px;
+}
+
+h1{
+    font-size: 90px;
+    color: var(--white);
+    font-family: var(--title);
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+}
+
+.curtidas {
+    background-color: #565B69;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    padding: 15px 20px;
+    border-radius: 25px;
+    width: 150px;
+    margin: 20px;
+}
+
+.curtidas p {
+    font-family: var(--text);
+    color: white;
+    margin-top: 6px;
+    font-size: 20px;
+}
+
+#img-favoritos {
+    font-size: 40px;
+    color: var(--purple);
+}
+
+#img-curtidas {
+    font-size: 40px;
+    color: #FFD484;
+}
+
+/* ////////////// */
+
+/* MENU PÁGINAS */
+
+.menuzinho {
+    background-color: var(--gray);
+    text-align: center;
+    padding: 15px 30px;
+    border-radius: 25px;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.menuzinho a {
+    font-family: var(--title);
+    font-size: 37px;
+    color: var(--white);
+    font-style: normal;
+    font-weight: normal;
+}
+
+.menuzinho li {
+    font-family: var(--title);
+    font-size: 37px;
+    color: var(--white);
+    font-style: normal;
+    font-weight: normal;
+}
+
+.menuzinho li:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.menuzinho a:hover {
+    color: var(--light_purple);
+    transition: 0.4s;
+}
+
+#selected a {
+    color: var(--light_purple);
+}
+
+.menuzinho hr {
+    width: 100%;
+    border: 1px solid var(--light_grey);
+    margin: 10px 0px;
+}
+
+/* ///////////////////////////////////////////////////// */
+
+/* CONTEUDO MEIO */
+
+.conteudo {
+    width: 100vw;
+}
+
+.caixa-conteudo {
+    background-color: var(--gray);
+    width: 95%;
+    border-radius: 25px;
+    padding: 50px 40px;
+}
+
+.main-conteudo h1 {
+    background-color: var(--purple);
+    font-size: 46px;
+    width: 99%;
+    border-radius: 100px;
+    margin: 10px 0px 30px 0px;
+    margin-top: -2%;
+    text-align: center;
+}
+
+.main-conteudo p {
+    color: var(--white);
+    padding: 10px;
+    font-family: var(--text);
+    font-size: 26px;
+    line-height: 100%;
+    margin: 0px 30px 20px;
+}
+
+.blocosinformacao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blocosinformacao h1{
+    background-color: var(--purple);
+    font-size: 38px;
+    width: 28%;
+    border-radius: 100px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.imges {
+    justify-content: center;
+    width: 890px;
+    height: 321px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px #14181c69;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.imges img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.conteudo hr {
+    width: 94%;
+    border: 1px solid #76777a;
+    margin: 4px auto 30px auto;
+}
+
+/* ///////////////////////////////////////////////////// */
+
+/* MENU DIREITA */
+
+/* títulos */
+.outro h3 {
+    color: var(--white);
+    font-family: var(--title);
+    font-weight: 200;
+
+    font-size: 35px;
+}
+
+/* /////////////// */
+
+/* FAVORITAR */
+
+/* caixinha */
+.favoritar {
+    background-color: var(--gray);
+    display: flex;
+    padding: 15px 20px;
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 230px;
+}
+
+/* coração */
+#img-favoritar {
+    font-size: 50px;
+    color: var(--white);
+}
+
+/* animação favoritar */
+.favoritar i:hover {
+    transform: scale(1.15);
+    color: var(--light_purple) !important;
+    transition: 0.4s ;
+}
+.favoritar i {
+    transition: transform 0.3s ease;
+}
+.favoritar h3 {
+    transition: opacity 0.3s ease; 
+}
+.favoritado {
+    transform: scale(1.15);
+}
+.bxs-heart {
+    color: var(--light_purple) !important;
+    transition: 0.4s ease !important;
+}
+
+/* /////////////// */
+
+/* AVALIAR */
+
+/* caixinha */
+.avaliar {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--gray);
+    border-radius: 25px;
+    text-align: center;
+    gap: 10px;
+    width: 230px;
+    margin-top: 20px;
+    padding: 0px 20px 25px 20px;
+}
+
+/* background roxo */
+span {
+    background-color: var(--purple);
+    width: 230px;
+    border-radius: 25px 25px 0px 0px;
+    margin: 0px -20px 7px -20px;
+    padding: 5px 20px;
+
+}
+
+/* estrelas */
+.estrelas-avaliar li {
+    display: inline;
+    font-size: 42px;
+    margin: 0px -3px;
+    color: var(--white);
+}
+
+/* animação avaliar */
+.estrelas-avaliar li i:hover {
+    color: var(--light_purple);
+    transform: scale(1.3);
+}
+.estrelas-avaliar li i {
+    transition: transform 0.2s ease-in-out;
+}
+.estrelas-avaliar li i.clicked {
+    transform: scale(1.3); /* Aumenta o tamanho da estrela */
+}
+.bxs-star {
+    color: var(--light_purple); /* Cor da estrela preenchida */
+}
+
+/* comentar */
+.avaliar a {
+    text-decoration: underline;
+}
+
+/* caixinha ver avaliações */
+.ver-avaliacoes {
+    background-color: var(--gray);
+    width: 230px;
+    padding: 15px 20px;
+    border-radius: 100px;
+    text-align: center;
+    margin: 10px 0px;
+}
+.outro a {
+    color: var(--soft_pink);
+    font-family: var(--text);
+    font-size: 20px;
+}
+
+/* MAPA */
+
+/* caixinha */
+.mapa {
+    background-color: var(--gray);
+    border-radius: 25px;
+    height: 240px;
+    width: 240px;
+    padding: 10px;
+}
+
+/* iframe */
+.map {
+    border-radius: 25px;
+}
+
+/* ///////////////////////////////////////////////////// */
+
+/* VOLTAR AO TOPO */
+
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0;  /* esconde o botão */
+    background-color: var(--purple);
+    color: var(--white);
+    border: none;
+    border-radius: 100px; 
+    padding: 16px;
+    font-size: 22px; 
+    cursor: pointer; 
+    box-shadow: 0px 0px 10px #14181c69;
+    transition: opacity 0.3s ease; /* efeito de transição */
+}
+
+#backToTop:hover {
+    background-color: var(--hover_purple);
+    transition: 0.3s ease;
+}
+
+#backToTop.show {
+    opacity: 1; /* exibe o botão */
+}

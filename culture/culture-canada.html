@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Travly - Brasil</title> <!-- alterar de acordo com o país -->
+    <link rel="stylesheet" href="stylecountry.css"> <!-- css -->
+    <link rel="shortcut icon" href="/travly-front/IMG/Logo01.png" type="image/x-icon"> <!-- favicon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!-- icons -->
+</head>
+
+<!-- Ao criar uma nova página de país:
+Tudo que você irá modificar está aqui no HTML e explicado corretamente.
+A única coisa que você irá modificar no CSS é o background. -->
+
+<body>
+
+    <!-- botão voltar ao topo da página -->
+    <button id="backToTop" onclick="scrollToTop()"><i class='bx bxs-up-arrow'
+            style="color: #ffffff;"></i></box-icon></button>
+
+    <!-- navbar -->
+    <div id="navbar"></div>
+
+    <script>
+        fetch('../../../../components/navbar/nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+    </script>
+
+    <!-- main -->
+    <main>
+        <div class="background">
+            <!-- mudar background do país no css -->
+
+            <!-- menu lateral esquerda -->
+            <section class="menu">
+                <div class="bloco-bandeira">
+                    <img class="bandeira" src="../images/bandeira-canada.png" alt="Bandeira do Brasil">
+                    <!-- mudar imagem e alt de acordo com país -->
+                    <h1>Canadá</h1> <!-- mudar nome do país -->
+                </div>
+
+                <!-- nota de avaliações e curtidas -->
+                <!-- numeros ilusórios, atualizar com média do banco de dados -->
+                <div class="curtidas">
+                    <div class="avaliacao">
+                        <i class='bx bxs-star' id="img-curtidas"></i>
+                        <p>8k</p>
+                    </div>
+                    <div class="favoritos">
+                        <i class='bx bxs-heart' id="img-favoritos"></i>
+
+                        <p>34k</p>
+                    </div>
+                </div>
+
+                <!-- menu de páginas -->
+                <div>
+                    <ul class="menuzinho">
+                        <!-- colocar o id="selected" da página que estiver -->
+                        <!-- mudar caminhos de acordo com o país -->
+                        <li><a href="../main-brazil/pagebrazil.html">SOBRE</a></li>
+                        <hr>
+                        <li><a href="../tourism/turism.html">TURISMO E IMIGRAÇÃO</a></li>
+                        <hr>
+                        <li><a href="../laws-brazil/page-laws.html">LEIS</a></li>
+                        <hr>
+                        <li><a href="../pontos-turisticos/pontos-brazil.html">PONTOS TURÍSTICOS</a></li>
+                        <hr>
+                        <li><a href="../events-brazil/events.html">EVENTOS</a></li>
+                        <hr>
+                        <li id="selected"><a href="../culture/culture-canada.html">CULTURA</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- conteúdo principal -->
+            <section class="conteudo">
+                <div class="caixa-conteudo">
+                    <article class="main-conteudo">
+                        <h1>CULTURA</h1>
+
+                        <div class="blocosinformacao">
+                            <h1>HISTÓRIA</h1>
+                            <!-- mudar imagem e texto de acordo com o país -->
+                            <div class="imges"><img src="../images/culturesimgs/historia.jpg" alt=""></div>
+                            <p>O Canadá tem uma história longa, que tem como ponto importante a colonização dos
+                                franceses e ingleses em seu território. Mas, no ano de 1867 as três colônias britânicas
+                                da américa do norte decidiram se unir em uma só confederação formando assim o Canadá,
+                                mas somente no ano de 1982 o Canadá se livrou da dependência jurídica britânica quando
+                                então, promulgou a Carta Canadense de Direitos e Liberdades. O Canadá é até hoje um país
+                                diverso e multicultural, que tem como o inglês e o francês suas duas línguas oficiais,
+                                sua cultura é uma grande mistura dos colonizadores franceses e ingleses com os povos
+                                originários canadenses.
+                            </p>
+                        </div>
+                        <hr>
+                        <div class="blocosinformacao">
+                            <h1>CULINÁRIA</h1>
+                            <!-- mudar imagem e texto de acordo com o país -->
+                            <div class="imges"><img src="../images/culturesimgs/culinaria.jpg" alt=""></div>
+                            <p>Sua culinária é igualmente diversa, tendo vários aspectos e influências nos franceses,
+                                ingleses, nativos e até mesmo chineses. Sua gastronomia é diversificada e também atrai
+                                os turistas todos os anos. Um dos mais famosos e procurados é o clássico Maple Syrup
+                                (Xarope de Bordo), uma bebida de origem nativa e um dos grandes símbolos da culinária
+                                canadense. Outros pratos famosos são o Poutine (prato típico do Quebec) e o Bagel
+                                Montreal, um dos pães mais consumidos do Canadá
+                            </p>
+                        </div>
+                        <hr>
+                        <div class="blocosinformacao">
+                            <h1>RELIGIÕES</h1>
+                            <!-- mudar imagem e texto de acordo com o país -->
+                            <div class="imges"><img src="../images/culturesimgs/religiao.jpg" alt=""></div>
+                            <p>De forma geral, o Catolicismo é a maior e principal religião do país, porém, por se
+                                tratar de um país multiétnico e multicultural, existem várias outras que possuem uma
+                                grande comunidade no Canadá como o Protestantismo, Islã, Hinduísmo, Budismo, Sikhismo,
+                                Judaismo e outras mais</p>
+                        </div>
+                        <hr>
+                        <div class="blocosinformacao">
+                            <h1>HÁBITOS</h1>
+                            <!-- mudar imagem e texto de acordo com o país -->
+                            <div class="imges"><img src="../images/culturesimgs/habitos.jpg" alt=""></div>
+                            <p> Os canadenses são conhecidos por ser um povo muito pontual que gosta de chegar na hora
+                                marcada em seus compromissos, outro hábito comum canadense porém que costuma ser mais
+                                visto em países orientais é o dia tirar os calçados antes de entrar nas casas. As
+                                tradições como a comemoração da grande festa do Halloween e o amor pelo hóquei no gelo
+                                também são características dos canadenses.
+                            </p>
+                        </div>
+                        <hr>
+                        <div class="blocosinformacao">
+                            <h1>HIGIENE</h1>
+                            <!-- mudar imagem e texto de acordo com o país -->
+                            <div class="imges"><img src="../images/culturesimgs/higiene.jpg" alt=""></div>
+                            <p>De forma geral, não é da cultura dos canadenses tomarem banhos todos os dias, normalmente
+                                preferem tomar banho após dois ou três dias, e comumente banhos rápidos de até 10
+                                minutos. Lá, os canadenses jogam o papel higiênico dentro do vaso pelo fato de as
+                                tubulações serem grandes e reforçadas, o que não causa nenhum entupimento, é o lugar
+                                correto para o descarte. Os conhecidos hands sanitizers são populares entre os cidadãos,
+                                e é comum todo canadense carregar consigo mesmo uma embalagem desta para limpar as mãos
+                            </p>
+                        </div>
+                        <hr>
+                        <div class="blocosinformacao">
+                            <h1>SEGURANÇA</h1>
+                            <!-- mudar imagem e texto de acordo com o país -->
+                            <div class="imges"><img src="../images/culturesimgs/segurança.jpg" alt=""></div>
+                            <p>O canadá foi colocado na 11 posição em relação aos países mais seguros para se viver de
+                                acordo com a Global Peace Index de 2023, mesmo sem ser classificado, é de senso comum
+                                que o país é muito seguro e isso se reflete no comportamento das pessoas e nas
+                                estruturas dos bairros residenciais, onde é raro ver alguma casa com muros altos ou
+                                sistemas de segurança afim de evitar algum tipo de crime</p>
+                        </div>
+                        <hr>
+                        <div class="blocosinformacao">
+                            <h1>ARTE</h1>
+                            <!-- mudar imagem e texto de acordo com o país -->
+                            <div class="imges"><img src="../images/culturesimgs/arte.jpg" alt=""></div>
+                            <p>A arte do Canadá começa muito antes de sua colonização, os povos indígenas nativos da
+                                terra já produziam suas próprias belezas artísticas. Uma das artes mais conhecidas e
+                                lembradas, é com certeza os Totem Pole, postes entalhados e esculpidos em formas de
+                                entidades e de animais que os povos originários acreditavam e cultuavam, os totens eram
+                                feitos e usados pelos nativos na intenção de proteção como um talismã. O canadá foi
+                                berço de vários outros artistas como o conhecido “O Grupo dos Sete”, um grupo formado
+                                por pintores paisagistas que influenciaram as artes durante o século XX</p>
+                        </div>
+                        <hr>
+                        <div class="blocosinformacao">
+                            <h1>VESTIMENTAS</h1>
+                            <!-- mudar imagem e texto de acordo com o país -->
+                            <div class="imges"><img src="../images/culturesimgs/vestimenta.jpg" alt=""></div>
+                            <p>No Canadá é comum que as pessoas vistam e saiam com as roupas amassadas, sem se
+                                preocupar em passá-las, é um dos costumes Canadenses mais interessantes, porém o inverno
+                                no Canadá é castigante, então nessa estação é necessário redobrar a atenção no momento
+                                de se vestir para continuar mantendo o corpo aquecido. Os canadenses vestem em épocas
+                                mais frias roupas grossas e que cubram todo o corpo como luvas reforçadas, jaquetas e
+                                casacos impermeáveis, toucas, calças para frio reforçadas, meias e calçados fechados</p>
+                        </div>
+                        <hr>
+                        <div class="blocosinformacao">
+                            <h1>FOLCLORE</h1>
+                            <!-- mudar imagem e texto de acordo com o país -->
+                            <div class="imges"><img src="../images/culturesimgs/folclore.jpg" alt=""></div>
+                            <p>Assim como todo o país do Canadá, seu folclore é bastante diverso e envolve lendas e
+                                histórias dos povos franceses, ingleses e indígenas. Algumas das histórias mais
+                                conhecidas e populares no território são a dos Sasquatch, uma criatura alta que vive nas
+                                florestas de British Columbia, a lenda vem dos nativos da região. Existem outras lendas
+                                como a do Loup-Garou que tem origem francesa, o Ogopogo que é descrito como uma serpente
+                                enorme com escamas verdes ou pretas que habita no lago Okanagan, e o Windigo, um monstro
+                                que devora pessoas, também de origem indigena</p>
+                        </div>
+                        <hr>
+                        <div class="blocosinformacao">
+                            <h1>ESPORTES</h1>
+                            <!-- mudar imagem e texto de acordo com o país -->
+                            <div class="imges"><img src="../images/culturesimgs/esportes.jpg" alt=""></div>
+                            <p>Os canadenses curtem viver um estilo de vida mais ativo, com a prática de exercícios e
+                                esportes incluídas na rotina do dia a dia. Com isso, vários esportes são populares no
+                                Canadá como o futebol, baseball, basquete, escaladas, natação. Há também os esportes que
+                                se tornaram populares pelos fatores climáticos do país como o hockey, snowboarding,
+                                patinação no gelo e o lacrosse.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- menu lateral direita -->
+            <section class="outro">
+
+                <!-- favoritar -->
+                <!-- atualizar com backend para exigir estar logado -->
+                <!-- <div class="favoritar">
+                    <i class='bx bx-heart' id="img-favoritar" onclick="favoritar()"></i>
+                    <h3 id="texto-favoritar">FAVORITAR</h3>
+                </div> -->
+
+                <!-- avaliar -->
+                <!-- atualizar com backend para exigir estar logado -->
+                <div class="avaliar">
+                    <span>
+                        <h3>AVALIAR</h3>
+                    </span>
+                    <ul class="estrelas-avaliar">
+                        <li class="estrela" data-value="1"><i class='bx bx-star' id="img-avaliar"></i></li>
+                        <li class="estrela" data-value="2"><i class='bx bx-star' id="img-avaliar"></i></li>
+                        <li class="estrela" data-value="3"><i class='bx bx-star' id="img-avaliar"></i></li>
+                        <li class="estrela" data-value="4"><i class='bx bx-star' id="img-avaliar"></i></li>
+                        <li class="estrela" data-value="5"><i class='bx bx-star' id="img-avaliar"></i></li>
+                    </ul>
+                    <a href="#">e comentar </a>
+                    <!-- atualizar com caixinha que abre por cima -->
+                </div>
+
+                <!-- ver avaliações -->
+                <div class="ver-avaliacoes">
+                    <a href="#">Ver avaliações</a>
+                </div>
+
+                <!-- mapa -->
+                <div class="mapa">
+                    <!-- ir no site "https://www.maps.ie/create-google-map/", colocar:
+                    (Address = nome do país / Zoom = country ou continent / Height = 240),
+                    copiar o iframe e substituir toda linha abaixo -->
+                    <div style="width: 100%"><iframe class="map" width="100%" height="240" frameborder="0"
+                            scrolling="no" marginheight="0" marginwidth="0"
+                            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=brazil+(Brasil)&amp;t=&amp;z=3&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+                                href="https://www.gps.ie/">gps trackers</a></iframe></div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- código javascript -->
+    <script src="../script.js"></script>
+</body>
+
+</html>
